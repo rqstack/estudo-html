@@ -1,0 +1,442 @@
+
+
+<!-- elementos estruturais -->
+ <div>  
+    alguma coisa 
+ </div>
+ 
+
+ <!--
+==================================================
+DIV (<div>) - EXPLICAÇÃO COMPLETA
+==================================================
+
+O que é uma DIV?
+
+A tag <div> significa "Division" (Divisão).
+
+Ela é um elemento de bloco utilizado para agrupar e organizar
+outros elementos HTML dentro de uma página.
+
+A <div> não possui significado semântico próprio.
+Seu principal objetivo é estruturar o layout e facilitar
+a aplicação de estilos (CSS) e funcionalidades (JavaScript).
+
+--------------------------------------------------
+
+CARACTERÍSTICAS DA DIV
+
+✓ Ocupa toda a largura disponível da tela.
+✓ É um elemento de bloco (display: block).
+✓ Pode conter qualquer elemento HTML.
+✓ Pode receber classes e IDs.
+✓ Pode ser estilizada com CSS.
+✓ Pode ser manipulada com JavaScript.
+
+--------------------------------------------------
+
+EXEMPLO BÁSICO
+
+<div>
+    <h1>Título</h1>
+    <p>Parágrafo dentro da div.</p>
+</div>
+
+Neste exemplo a div funciona como um container,
+agrupando o título e o parágrafo.
+
+--------------------------------------------------
+
+DIV COM CLASS
+
+Atributo class:
+Utilizado quando vários elementos possuem o mesmo estilo.
+
+<div class="card">
+    Conteúdo
+</div>
+
+CSS:
+
+.card {
+    background: #fff;
+    padding: 20px;
+}
+
+--------------------------------------------------
+
+DIV COM ID
+
+Atributo id:
+Utilizado para identificar um elemento único na página.
+
+<div id="cabecalho">
+    Menu principal
+</div>
+
+CSS:
+
+#cabecalho {
+    background: black;
+}
+
+JavaScript:
+
+document.getElementById("cabecalho");
+
+--------------------------------------------------
+
+DIV COMO CONTAINER
+
+Muito utilizada para organizar seções.
+
+<div class="container">
+    <header>Cabeçalho</header>
+    <main>Conteúdo</main>
+    <footer>Rodapé</footer>
+</div>
+
+--------------------------------------------------
+
+DIV PARA LAYOUT
+
+Exemplo de duas colunas:
+
+<div class="esquerda">
+    Menu
+</div>
+
+<div class="direita">
+    Conteúdo
+</div>
+
+--------------------------------------------------
+
+DIV E FLEXBOX
+
+<div class="container">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+
+CSS:
+
+.container{
+    display:flex;
+    gap:20px;
+}
+
+Permite alinhar elementos horizontalmente.
+
+--------------------------------------------------
+
+DIV E GRID
+
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+Permite criar layouts complexos em linhas e colunas.
+
+--------------------------------------------------
+
+QUANDO USAR DIV?
+
+✓ Agrupar elementos.
+✓ Criar seções visuais.
+✓ Aplicar estilos.
+✓ Criar layouts.
+✓ Manipular conteúdo com JavaScript.
+
+--------------------------------------------------
+
+QUANDO NÃO USAR DIV?
+
+Evite usar div para tudo.
+
+HTML5 possui tags semânticas mais apropriadas:
+
+<header>   Cabeçalho
+<nav>      Navegação
+<main>     Conteúdo principal
+<section>  Seção
+<article>  Artigo
+<aside>    Conteúdo lateral
+<footer>   Rodapé
+
+Exemplo ruim:
+
+<div id="menu"></div>
+
+Exemplo melhor:
+
+<nav></nav>
+
+--------------------------------------------------
+
+DIV VS SPAN
+
+<div>
+- Elemento de bloco.
+- Ocupa toda a largura.
+- Quebra linha automaticamente.
+
+<span>
+- Elemento inline.
+- Ocupa apenas o espaço do conteúdo.
+- Não quebra linha.
+
+Exemplo:
+
+<div>Sou uma DIV</div>
+
+<span>Sou um SPAN</span>
+
+--------------------------------------------------
+
+ESTRUTURA REAL DE SITE
+
+<div class="container">
+
+    <div class="header">
+        Cabeçalho
+    </div>
+
+    <div class="banner">
+        Banner Principal
+    </div>
+
+    <div class="content">
+        Conteúdo
+    </div>
+
+    <div class="footer">
+        Rodapé
+    </div>
+
+</div>
+
+--------------------------------------------------
+
+RESUMO
+
+<div> = Container genérico de bloco.
+
+Principais usos:
+✔ Organizar conteúdo
+✔ Criar layouts
+✔ Aplicar CSS
+✔ Manipular com JavaScript
+✔ Agrupar elementos
+
+A div é uma das tags mais utilizadas no desenvolvimento web,
+sendo a base da estrutura visual da maioria dos sites modernos.
+==================================================
+-->
+
+
+<span>elementos estruturais</span>
+
+<!--
+==================================================
+SPAN (<span>) - EXPLICAÇÃO COMPLETA
+==================================================
+
+O que é um SPAN?
+
+A tag <span> é um elemento inline utilizado para
+selecionar, agrupar ou estilizar pequenas partes
+de um texto ou conteúdo.
+
+Diferente da <div>, o <span> NÃO quebra linha
+e ocupa apenas o espaço necessário para seu conteúdo.
+
+--------------------------------------------------
+
+CARACTERÍSTICAS DO SPAN
+
+✓ Elemento inline
+✓ Não quebra linha
+✓ Ocupa apenas o tamanho do conteúdo
+✓ Pode receber classes e IDs
+✓ Pode ser estilizado com CSS
+✓ Pode ser manipulado com JavaScript
+
+--------------------------------------------------
+
+EXEMPLO BÁSICO
+
+<p>
+    Meu nome é <span>Renan</span>.
+</p>
+
+Resultado:
+
+Meu nome é Renan.
+
+O texto continua na mesma linha.
+
+--------------------------------------------------
+
+ESTILIZANDO UM SPAN
+
+HTML:
+
+<p>
+    Meu nome é <span class="destaque">Renan</span>.
+</p>
+
+CSS:
+
+.destaque{
+    color: blue;
+    font-weight: bold;
+}
+
+Resultado:
+
+Apenas a palavra "Renan" será estilizada.
+
+--------------------------------------------------
+
+USANDO ID
+
+HTML:
+
+<span id="nome">
+    Renan
+</span>
+
+JavaScript:
+
+document.getElementById("nome");
+
+--------------------------------------------------
+
+DESTACANDO PALAVRAS
+
+<p>
+    Aprenda <span class="html">HTML</span>,
+    <span class="css">CSS</span> e
+    <span class="js">JavaScript</span>.
+</p>
+
+Cada palavra pode receber um estilo diferente.
+
+--------------------------------------------------
+
+SPAN DENTRO DE TÍTULOS
+
+<h1>
+    Desenvolvedor
+    <span>Full Stack</span>
+</h1>
+
+Muito usado para destacar uma palavra específica.
+
+--------------------------------------------------
+
+SPAN VS DIV
+
+DIV:
+- Elemento de bloco
+- Ocupa toda largura
+- Quebra linha
+
+SPAN:
+- Elemento inline
+- Ocupa apenas o conteúdo
+- Não quebra linha
+
+Exemplo:
+
+<div>Primeira DIV</div>
+<div>Segunda DIV</div>
+
+Resultado:
+Cada uma em uma linha.
+
+--------------------------------
+
+<span>Primeiro SPAN</span>
+<span>Segundo SPAN</span>
+
+Resultado:
+Ficam na mesma linha.
+
+--------------------------------------------------
+
+QUANDO USAR SPAN?
+
+✓ Destacar palavras
+✓ Alterar cor de parte do texto
+✓ Aplicar estilos específicos
+✓ Selecionar partes do conteúdo
+✓ Manipular textos com JavaScript
+
+--------------------------------------------------
+
+QUANDO NÃO USAR SPAN?
+
+Não use para criar layouts.
+
+Errado:
+
+<span>
+    Menu Completo
+</span>
+
+Melhor:
+
+<div>
+    Menu Completo
+</div>
+
+ou
+
+<nav>
+    Menu Completo
+</nav>
+
+--------------------------------------------------
+
+EXEMPLO PROFISSIONAL
+
+<h1>
+    Transformando ideias em
+    <span class="highlight">
+        experiências digitais
+    </span>
+</h1>
+
+CSS:
+
+.highlight{
+    color:#4f46e5;
+}
+
+Muito utilizado em Landing Pages e Portfólios.
+
+--------------------------------------------------
+
+RESUMO
+
+<span> = Container inline genérico.
+
+Principais usos:
+✔ Destacar palavras
+✔ Aplicar estilos em partes do texto
+✔ Manipular conteúdo com JavaScript
+✔ Não quebra linha
+✔ Ocupa apenas o espaço necessário
+
+DIV = Bloco
+SPAN = Inline
+
+Regra simples:
+Se for um bloco de conteúdo → DIV
+Se for apenas uma palavra ou trecho de texto → SPAN
+==================================================
+-->

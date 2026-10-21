@@ -1,0 +1,1154 @@
+# 📊 TABELAS NO HTML — GUIA COMPLETO
+
+<!--
+    OBJETIVO DESTE ARQUIVO:
+
+    Aprender como criar tabelas em HTML do zero.
+
+    A estrutura básica de uma tabela é:
+
+    <table>
+        <tr>
+            <td>Conteúdo</td>
+        </tr>
+    </table>
+
+    Pense assim:
+
+    table = a tabela inteira
+    tr    = uma linha
+    th    = uma célula de título/cabeçalho
+    td    = uma célula de conteúdo
+-->
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Estudo de Tabelas HTML</title>
+
+<style>
+
+    /*
+        =====================================================
+        CSS DA TABELA
+        =====================================================
+
+        O foco deste arquivo é HTML.
+
+        Porém, coloquei um pouco de CSS para você
+        conseguir visualizar melhor a estrutura da tabela.
+    */
+
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    th,
+    td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #ddd;
+    }
+
+    caption {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>Estudando Tabelas em HTML</h1>
+
+
+<!-- =====================================================
+     1. A TABELA MAIS BÁSICA POSSÍVEL
+     ===================================================== -->
+
+<h2>1. Tabela básica</h2>
+
+<!--
+    <table>
+
+    É o elemento que representa a tabela inteira.
+-->
+
+<table>
+
+    <!--
+        <tr>
+
+        Significa "table row".
+
+        Em português:
+        LINHA DA TABELA.
+    -->
+
+    <tr>
+
+        <!--
+            <td>
+
+            Significa "table data".
+
+            É uma célula normal da tabela.
+        -->
+
+        <td>Renan</td>
+        <td>20</td>
+        <td>São Paulo</td>
+
+    </tr>
+
+    <tr>
+
+        <td>João</td>
+        <td>22</td>
+        <td>Rio de Janeiro</td>
+
+    </tr>
+
+</table>
+
+
+<!-- =====================================================
+     2. ENTENDENDO TR E TD
+     ===================================================== -->
+
+<h2>2. Entendendo TR e TD</h2>
+
+<!--
+
+    Pense em uma tabela como uma planilha:
+
+    LINHA 1:
+    | Renan | 20 | São Paulo |
+
+    LINHA 2:
+    | João  | 22 | Rio de Janeiro |
+
+    <tr> = linha
+
+    <td> = célula
+
+    Portanto:
+
+    <tr>
+        <td>Renan</td>
+        <td>20</td>
+        <td>São Paulo</td>
+    </tr>
+
+    significa:
+
+    Uma linha contendo 3 células.
+-->
+
+<table>
+
+    <tr>
+        <td>HTML</td>
+        <td>CSS</td>
+        <td>JavaScript</td>
+    </tr>
+
+    <tr>
+        <td>Estrutura</td>
+        <td>Estilo</td>
+        <td>Programação</td>
+    </tr>
+
+</table>
+
+
+<!-- =====================================================
+     3. TH — CABEÇALHO DA TABELA
+     ===================================================== -->
+
+<h2>3. Usando TH</h2>
+
+<!--
+
+    <th>
+
+    Significa "table header".
+
+    É usado para representar uma célula de CABEÇALHO.
+
+    Exemplo:
+
+    Nome | Idade | Cidade
+
+    "Nome", "Idade" e "Cidade" são cabeçalhos.
+
+    Por isso usamos <th>.
+-->
+
+<table>
+
+    <tr>
+
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+
+    </tr>
+
+    <tr>
+
+        <td>Renan</td>
+        <td>20</td>
+        <td>São Paulo</td>
+
+    </tr>
+
+    <tr>
+
+        <td>Lucas</td>
+        <td>21</td>
+        <td>Santos</td>
+
+    </tr>
+
+</table>
+
+
+<!-- =====================================================
+     4. THEAD
+     ===================================================== -->
+
+<h2>4. THEAD — Cabeçalho da tabela</h2>
+
+<!--
+
+    <thead>
+
+    É utilizado para agrupar o CABEÇALHO da tabela.
+
+    Dentro dele normalmente colocamos <tr> e <th>.
+
+    Estrutura:
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+
+    </table>
+
+    IMPORTANTE:
+
+    <thead> não é a mesma coisa que <th>.
+
+    <thead> = grupo/seção do cabeçalho
+
+    <th> = célula de cabeçalho
+-->
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Curso</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Renan</td>
+            <td>20</td>
+            <td>Engenharia de Software</td>
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+            <td>22</td>
+            <td>Sistemas de Informação</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<!-- =====================================================
+     5. TBODY
+     ===================================================== -->
+
+<h2>5. TBODY — Corpo da tabela</h2>
+
+<!--
+
+    <tbody>
+
+    Representa o CORPO da tabela.
+
+    É onde normalmente ficam os dados.
+
+    Estrutura:
+
+    <table>
+
+        <thead>
+            Cabeçalho
+        </thead>
+
+        <tbody>
+            Dados
+        </tbody>
+
+    </table>
+-->
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Mouse</td>
+            <td>R$ 80</td>
+            <td>15</td>
+        </tr>
+
+        <tr>
+            <td>Teclado</td>
+            <td>R$ 150</td>
+            <td>8</td>
+        </tr>
+
+        <tr>
+            <td>Monitor</td>
+            <td>R$ 900</td>
+            <td>5</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<!-- =====================================================
+     6. TFOOT
+     ===================================================== -->
+
+<h2>6. TFOOT — Rodapé da tabela</h2>
+
+<!--
+
+    <tfoot>
+
+    Representa o RODAPÉ da tabela.
+
+    É muito utilizado para:
+
+    - totais
+    - resultados
+    - observações
+    - informações finais
+-->
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Mouse</td>
+            <td>2</td>
+            <td>R$ 160</td>
+        </tr>
+
+        <tr>
+            <td>Teclado</td>
+            <td>1</td>
+            <td>R$ 150</td>
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+
+        <tr>
+            <th colspan="2">Total</th>
+            <th>R$ 310</th>
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+<!-- =====================================================
+     7. CAPTION
+     ===================================================== -->
+
+<h2>7. CAPTION — Título da tabela</h2>
+
+<!--
+
+    <caption>
+
+    Serve para colocar um título/descrição na tabela.
+
+    É uma boa prática porque ajuda o usuário a entender
+    imediatamente o que aquela tabela representa.
+-->
+
+<table>
+
+    <caption>Alunos da turma</caption>
+
+    <thead>
+
+        <tr>
+            <th>Nome</th>
+            <th>Curso</th>
+            <th>Semestre</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Renan</td>
+            <td>Engenharia de Software</td>
+            <td>1º</td>
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+            <td>Engenharia de Software</td>
+            <td>2º</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<!-- =====================================================
+     8. COLSPAN
+     ===================================================== -->
+
+<h2>8. COLSPAN — Mesclar colunas</h2>
+
+<!--
+
+    colspan significa:
+
+    "column span"
+
+    Ou seja:
+
+    QUANTAS COLUNAS ESSA CÉLULA VAI OCUPAR?
+
+    Exemplo:
+
+    colspan="2"
+
+    significa que a célula ocupará 2 colunas.
+-->
+
+<table>
+
+    <tr>
+
+        <th colspan="2">
+            Informações do aluno
+        </th>
+
+    </tr>
+
+    <tr>
+
+        <td>Nome</td>
+        <td>Renan</td>
+
+    </tr>
+
+    <tr>
+
+        <td>Curso</td>
+        <td>Engenharia de Software</td>
+
+    </tr>
+
+</table>
+
+
+<!-- =====================================================
+     9. ROWSPAN
+     ===================================================== -->
+
+<h2>9. ROWSPAN — Mesclar linhas</h2>
+
+<!--
+
+    rowspan significa:
+
+    "row span"
+
+    Ou seja:
+
+    QUANTAS LINHAS ESSA CÉLULA VAI OCUPAR?
+
+    Exemplo:
+
+    rowspan="2"
+
+    significa que a célula ocupará 2 linhas.
+-->
+
+<table>
+
+    <tr>
+
+        <th>Nome</th>
+        <th>Matéria</th>
+        <th>Nota</th>
+
+    </tr>
+
+    <tr>
+
+        <td rowspan="2">Renan</td>
+
+        <td>HTML</td>
+
+        <td>10</td>
+
+    </tr>
+
+    <tr>
+
+        <td>CSS</td>
+
+        <td>9</td>
+
+    </tr>
+
+</table>
+
+
+<!-- =====================================================
+     10. SCOPE
+     ===================================================== -->
+
+<h2>10. SCOPE — Acessibilidade</h2>
+
+<!--
+
+    O atributo "scope" ajuda tecnologias assistivas,
+    como leitores de tela, a entenderem a relação entre
+    cabeçalhos e dados.
+
+    scope="col"
+
+    significa que aquele <th> é cabeçalho de uma COLUNA.
+
+    scope="row"
+
+    significa que aquele <th> é cabeçalho de uma LINHA.
+-->
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Curso</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <th scope="row">Renan</th>
+
+            <td>20</td>
+            <td>Engenharia de Software</td>
+
+        </tr>
+
+        <tr>
+
+            <th scope="row">Lucas</th>
+
+            <td>22</td>
+            <td>ADS</td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<!-- =====================================================
+     11. TABELA COMPLETA
+     ===================================================== -->
+
+<h2>11. Exemplo profissional</h2>
+
+<!--
+
+    Aqui juntamos vários conceitos:
+
+    <table>
+    <caption>
+    <thead>
+    <tbody>
+    <tfoot>
+    <tr>
+    <th>
+    <td>
+    scope
+    colspan
+-->
+
+<table>
+
+    <caption>
+        Notas dos alunos
+    </caption>
+
+    <thead>
+
+        <tr>
+
+            <th scope="col">Aluno</th>
+            <th scope="col">HTML</th>
+            <th scope="col">CSS</th>
+            <th scope="col">JavaScript</th>
+            <th scope="col">Média</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <th scope="row">Renan</th>
+
+            <td>10</td>
+            <td>9</td>
+            <td>8</td>
+            <td>9</td>
+
+        </tr>
+
+        <tr>
+
+            <th scope="row">Lucas</th>
+
+            <td>8</td>
+            <td>9</td>
+            <td>7</td>
+            <td>8</td>
+
+        </tr>
+
+        <tr>
+
+            <th scope="row">Pedro</th>
+
+            <td>9</td>
+            <td>8</td>
+            <td>10</td>
+            <td>9</td>
+
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+
+        <tr>
+
+            <th colspan="4">
+                Média geral da turma
+            </th>
+
+            <th>8,67</th>
+
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+<!-- =====================================================
+     12. TABELA COM MAIS DE UMA SEÇÃO
+     ===================================================== -->
+
+<h2>12. Exemplo de tabela de produtos</h2>
+
+<table>
+
+    <caption>
+        Produtos disponíveis
+    </caption>
+
+    <thead>
+
+        <tr>
+
+            <th scope="col">Produto</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Estoque</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <th scope="row">Mouse</th>
+
+            <td>Periférico</td>
+            <td>R$ 80</td>
+            <td>20</td>
+
+        </tr>
+
+        <tr>
+
+            <th scope="row">Teclado</th>
+
+            <td>Periférico</td>
+            <td>R$ 150</td>
+            <td>10</td>
+
+        </tr>
+
+        <tr>
+
+            <th scope="row">Monitor</th>
+
+            <td>Hardware</td>
+            <td>R$ 900</td>
+            <td>5</td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<!-- =====================================================
+     13. COMO PENSAR EM UMA TABELA
+     ===================================================== -->
+
+<h2>13. Como pensar na estrutura</h2>
+
+<!--
+
+    Quando você precisar criar uma tabela,
+    pense nessa sequência:
+
+    1º - Qual é o assunto da tabela?
+
+    2º - Quais são as COLUNAS?
+
+    3º - Quais são os DADOS?
+
+    4º - Existe um TOTAL?
+
+    Depois monte:
+
+    <table>
+
+        <caption>
+            Título
+        </caption>
+
+        <thead>
+
+            <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Dado</td>
+                <td>Dado</td>
+                <td>Dado</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+
+            <tr>
+                <td>Total</td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+-->
+
+
+<!-- =====================================================
+     14. RESUMO DOS ELEMENTOS
+     ===================================================== -->
+
+<h2>14. RESUMO</h2>
+
+<!--
+
+    <table>
+    -----------------------------------------------------
+    Cria a tabela inteira.
+
+
+    <tr>
+    -----------------------------------------------------
+    Cria uma linha.
+
+
+    <th>
+    -----------------------------------------------------
+    Cria uma célula de CABEÇALHO.
+
+
+    <td>
+    -----------------------------------------------------
+    Cria uma célula de DADOS.
+
+
+    <thead>
+    -----------------------------------------------------
+    Agrupa o cabeçalho.
+
+
+    <tbody>
+    -----------------------------------------------------
+    Agrupa o corpo da tabela.
+
+
+    <tfoot>
+    -----------------------------------------------------
+    Agrupa o rodapé da tabela.
+
+
+    <caption>
+    -----------------------------------------------------
+    Define o título/descrição da tabela.
+
+
+    colspan
+    -----------------------------------------------------
+    Faz uma célula ocupar várias COLUNAS.
+
+
+    rowspan
+    -----------------------------------------------------
+    Faz uma célula ocupar várias LINHAS.
+
+
+    scope="col"
+    -----------------------------------------------------
+    Indica que o <th> representa uma coluna.
+
+
+    scope="row"
+    -----------------------------------------------------
+    Indica que o <th> representa uma linha.
+-->
+
+
+<!-- =====================================================
+     15. ESTRUTURA PARA DECORAR
+     ===================================================== -->
+
+<h2>15. Estrutura que você deve decorar</h2>
+
+<!--
+
+    NÃO precisa decorar todos os detalhes agora.
+
+    Primeiro decore esta estrutura:
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Cabeçalho</th>
+                <th>Cabeçalho</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr>
+
+                <td>Dado</td>
+                <td>Dado</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    Depois você aprende:
+
+    caption
+    tfoot
+    colspan
+    rowspan
+    scope
+
+
+    A lógica principal é:
+
+    TABLE
+      ↓
+    TR = LINHA
+      ↓
+    TH / TD = CÉLULAS
+-->
+
+
+<!-- =====================================================
+     16. ERRO MUITO COMUM
+     ===================================================== -->
+
+<h2>16. Cuidado com esse erro</h2>
+
+<!--
+
+    ERRADO:
+
+    <table>
+
+        <td>Renan</td>
+        <td>20</td>
+
+    </table>
+
+
+    O problema é que colocamos <td> diretamente
+    dentro de <table>.
+
+    O <td> deve estar dentro de um <tr>.
+
+
+    CORRETO:
+
+    <table>
+
+        <tr>
+
+            <td>Renan</td>
+            <td>20</td>
+
+        </tr>
+
+    </table>
+-->
+
+
+<!-- =====================================================
+     17. OUTRO ERRO COMUM
+     ===================================================== -->
+
+<h2>17. Não use tabela para criar layout</h2>
+
+<!--
+
+    Antigamente era comum usar tabelas para organizar
+    o layout inteiro de um site.
+
+    Hoje NÃO fazemos isso.
+
+    Para layout usamos principalmente:
+
+    CSS
+    Flexbox
+    Grid
+
+    Tabelas devem ser utilizadas para
+    DADOS TABULARES.
+
+    Exemplos:
+
+    ✔ Lista de preços
+    ✔ Notas de alunos
+    ✔ Produtos
+    ✔ Horários
+    ✔ Resultados
+    ✔ Relatórios
+    ✔ Dados financeiros
+
+    Não use tabela para:
+
+    ✘ Fazer o menu do site
+    ✘ Posicionar uma imagem
+    ✘ Criar colunas do site
+    ✘ Organizar o layout geral
+-->
+
+
+<!-- =====================================================
+     18. DESAFIO
+     ===================================================== -->
+
+<h2>18. DESAFIO PARA VOCÊ</h2>
+
+<!--
+
+    AGORA NÃO COPIE A RESPOSTA.
+
+    Tente criar sozinho uma tabela contendo:
+
+    Nome
+    Idade
+    Curso
+    Nota
+
+    Cadastre pelo menos 5 alunos.
+
+    Sua estrutura deve possuir:
+
+    <table>
+    <caption>
+    <thead>
+    <tbody>
+    <th>
+    <td>
+    scope
+
+    DESAFIO EXTRA:
+
+    Crie um <tfoot> mostrando a média da turma.
+
+    DESAFIO MAIS DIFÍCIL:
+
+    Use colspan para criar um título
+    ocupando várias colunas.
+-->
+```
+
+</body>
+
+</html>
+
+<!-- =========================================================
+     🧠 MAPA MENTAL
+
+     TABLE
+       │
+       ├── CAPTION
+       │      └── Título da tabela
+       │
+       ├── THEAD
+       │      └── Cabeçalho
+       │             └── TR
+       │                  └── TH
+       │
+       ├── TBODY
+       │      └── Dados
+       │             └── TR
+       │                  ├── TH
+       │                  └── TD
+       │
+       └── TFOOT
+              └── Rodapé
+                     └── TR
+                          └── TH / TD
+
+
+     PARA DECORAR:
+
+     TABLE = TABELA
+     TR    = LINHA
+     TH    = CABEÇALHO
+     TD    = DADO
+
+     THEAD = CABEÇALHO DA TABELA
+     TBODY = CORPO DA TABELA
+     TFOOT = RODAPÉ DA TABELA
+
+     COLSPAN = MESCLAR COLUNAS
+     ROWSPAN = MESCLAR LINHAS
+
+========================================================= -->

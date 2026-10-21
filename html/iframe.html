@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>iframe</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos fugit repellendus suscipit impedit totam qui laboriosam animi dolorem excepturi asperiores aspernatur, unde modi non ipsa dicta iure porro veniam corrupti.</p>
+<iframe src="https://www.youtube.com/embed/C-AA7wX-Lqc?si=zxfMQgyNKtLVSu1k"
+borde="50"
+width="350"
+height="200"
+title="YouTube"
+framborder="10"
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+=========================================
+IFRAME EM HTML5
+=========================================
+
+A tag <iframe> (Inline Frame) é utilizada para
+incorporar outra página web dentro da página atual.
+
+Com ela é possível exibir:
+
+- Vídeos do YouTube
+- Mapas do Google Maps
+- Sites externos
+- Formulários
+- Documentos PDF
+- Aplicações web
+
+-----------------------------------------
+SINTAXE BÁSICA
+-----------------------------------------
+
+<iframe src="pagina.html"></iframe>
+
+-----------------------------------------
+PRINCIPAIS ATRIBUTOS
+-----------------------------------------
+
+src
+- Define o endereço da página que será exibida.
+
+width
+- Define a largura do iframe.
+
+height
+- Define a altura do iframe.
+
+title
+- Descreve o conteúdo do iframe.
+- Importante para acessibilidade.
+
+loading
+- Controla o carregamento.
+- Valores:
+  * eager (carrega imediatamente)
+  * lazy (carrega quando necessário)
+
+allowfullscreen
+- Permite exibição em tela cheia.
+
+name
+- Dá um nome ao iframe para ser usado por links.
+
+sandbox
+- Aumenta a segurança restringindo ações da página incorporada.
+
+allow
+- Concede permissões específicas.
+- Exemplo:
+  camera, microphone, fullscreen.
+
+-----------------------------------------
+EXEMPLO SIMPLES
+-----------------------------------------
+
+<iframe
+    src="https://www.google.com"
+    width="600"
+    height="400">
+</iframe>
+
+-----------------------------------------
+EXEMPLO COM YOUTUBE
+-----------------------------------------
+
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/ID_DO_VIDEO"
+    title="Vídeo do YouTube"
+    allowfullscreen>
+</iframe>
+
+-----------------------------------------
+EXEMPLO COM GOOGLE MAPS
+-----------------------------------------
+
+<iframe
+    src="URL_DO_MAPA"
+    width="600"
+    height="450"
+    style="border:0;"
+    loading="lazy">
+</iframe>
+
+-----------------------------------------
+ABRINDO LINKS DENTRO DO IFRAME
+-----------------------------------------
+
+<iframe
+    src=""
+    name="janela"
+    width="600"
+    height="400">
+</iframe>
+
+<a href="pagina1.html" target="janela">
+    Página 1
+</a>
+
+<a href="pagina2.html" target="janela">
+    Página 2
+</a>
+
+O conteúdo será carregado dentro do iframe.
+
+-----------------------------------------
+ATRIBUTO SANDBOX
+-----------------------------------------
+
+O atributo sandbox aumenta a segurança.
+
+Exemplo:
+
+<iframe
+    src="pagina.html"
+    sandbox>
+</iframe>
+
+Permissões específicas:
+
+sandbox="allow-scripts"
+sandbox="allow-forms"
+sandbox="allow-same-origin"
+
+-----------------------------------------
+VANTAGENS
+-----------------------------------------
+
+✔ Incorporar conteúdos externos
+✔ Exibir vídeos facilmente
+✔ Mostrar mapas
+✔ Criar áreas independentes na página
+
+-----------------------------------------
+DESVANTAGENS
+-----------------------------------------
+
+✖ Pode deixar a página mais lenta
+✖ Alguns sites bloqueiam iframe
+✖ Pode gerar problemas de segurança
+✖ Nem todos os recursos funcionam em sites externos
+
+-----------------------------------------
+BOAS PRÁTICAS
+-----------------------------------------
+
+✔ Sempre usar o atributo title
+✔ Definir width e height
+✔ Utilizar loading="lazy"
+✔ Usar sandbox quando possível
+✔ Incorporar apenas fontes confiáveis
+
+-----------------------------------------
+RESUMO
+-----------------------------------------
+
+<iframe> -> Cria uma janela dentro da página
+
+Atributos mais usados:
+
+src
+width
+height
+title
+loading
+allowfullscreen
+name
+sandbox
+allow
+
+=========================================
+FIM DO RESUMO
+=========================================
+-->

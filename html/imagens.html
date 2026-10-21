@@ -1,0 +1,372 @@
+
+
+<!--imagens no html-->
+<img src="https://tse2.mm.bing.net/th/id/OIP.kwrbT1nLtMc6fZsbjOZwAwHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="foto do neymar"
+height="150px" width="150px">
+
+
+<img src="./img/ChatGPT Image 9 de jun. de 2026, 18_50_11.png" alt="foto de capa "
+height="100px" width="150px">
+
+<figure>
+    <img src="./img/ChatGPT Image 9 de jun. de 2026, 18_50_11.png" alt="foto de capa ">
+    <figcaption>Legenda da imagem</figcaption>
+</figure>
+
+
+
+<!--
+==================================================
+IMG (<img>) - EXPLICAÇÃO COMPLETA
+==================================================
+
+O que é a tag IMG?
+
+A tag <img> é utilizada para inserir imagens em uma
+página HTML.
+
+IMG significa "Image" (Imagem).
+
+Diferente da maioria das tags HTML, ela NÃO possui
+tag de fechamento.
+
+--------------------------------------------------
+
+SINTAXE BÁSICA
+
+<img src="imagem.jpg" alt="Descrição da imagem">
+
+--------------------------------------------------
+
+ATRIBUTOS PRINCIPAIS
+
+1. src (Source)
+
+Define o caminho da imagem.
+
+Exemplo:
+
+<img src="logo.png" alt="Logo">
+
+--------------------------------------------------
+
+2. alt (Alternative Text)
+
+Texto alternativo exibido quando a imagem não carrega.
+
+Também é importante para acessibilidade e SEO.
+
+Exemplo:
+
+<img src="logo.png" alt="Logo da empresa">
+
+--------------------------------------------------
+
+3. width
+
+Define a largura da imagem.
+
+Exemplo:
+
+<img src="foto.jpg" width="300">
+
+--------------------------------------------------
+
+4. height
+
+Define a altura da imagem.
+
+Exemplo:
+
+<img src="foto.jpg" height="200">
+
+--------------------------------------------------
+
+5. title
+
+Exibe uma dica ao passar o mouse.
+
+Exemplo:
+
+<img src="foto.jpg"
+     alt="Foto"
+     title="Minha Foto">
+
+--------------------------------------------------
+
+CAMINHOS DE IMAGENS
+
+1. Mesma pasta
+
+<img src="foto.jpg" alt="Foto">
+
+--------------------------------------------------
+
+2. Pasta interna
+
+<img src="./img/foto.jpg" alt="Foto">
+
+--------------------------------------------------
+
+3. Voltar pasta
+
+<img src="../foto.jpg" alt="Foto">
+
+--------------------------------------------------
+
+4. URL Externa
+
+<img
+src="https://site.com/imagem.jpg"
+alt="Imagem">
+
+--------------------------------------------------
+
+FORMATOS MAIS USADOS
+
+.jpg / .jpeg
+- Fotos
+- Arquivos menores
+
+.png
+- Transparência
+- Melhor qualidade
+
+.webp
+- Melhor compressão
+- Recomendado para web
+
+.svg
+- Vetorial
+- Logos e ícones
+
+.gif
+- Imagens animadas
+
+--------------------------------------------------
+
+EXEMPLO COMPLETO
+
+<img
+src="./img/perfil.jpg"
+alt="Foto de Perfil"
+width="300"
+title="Foto do Usuário">
+
+--------------------------------------------------
+
+IMG COM LINK
+
+<a href="https://google.com">
+    <img src="logo.png" alt="Logo">
+</a>
+
+Ao clicar na imagem, o usuário acessa o link.
+
+--------------------------------------------------
+
+IMG RESPONSIVA
+
+HTML:
+
+<img src="banner.jpg" alt="Banner">
+
+CSS:
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+A imagem se adapta ao tamanho da tela.
+
+--------------------------------------------------
+
+IMG COM CLASSE
+
+HTML:
+
+<img
+src="foto.jpg"
+class="perfil"
+alt="Foto">
+
+CSS:
+
+.perfil{
+    border-radius:50%;
+}
+
+--------------------------------------------------
+
+IMAGEM REDONDA
+
+CSS:
+
+img{
+    border-radius:50%;
+}
+
+Muito usado em fotos de perfil.
+
+--------------------------------------------------
+
+SOMBRA NA IMAGEM
+
+img{
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+--------------------------------------------------
+
+BORDA NA IMAGEM
+
+img{
+    border:3px solid black;
+}
+
+--------------------------------------------------
+
+CENTRALIZAR IMAGEM
+
+img{
+    display:block;
+    margin:auto;
+}
+
+--------------------------------------------------
+
+SEO PARA IMAGENS
+
+Sempre utilize o atributo ALT.
+
+ERRADO:
+
+<img src="produto.jpg">
+
+CERTO:
+
+<img
+src="produto.jpg"
+alt="Tênis esportivo masculino preto">
+
+Benefícios:
+✔ Melhor SEO
+✔ Melhor acessibilidade
+✔ Melhor experiência do usuário
+
+--------------------------------------------------
+
+LAZY LOADING
+
+Carrega a imagem apenas quando necessário.
+
+<img
+src="foto.jpg"
+alt="Foto"
+loading="lazy">
+
+Benefícios:
+✔ Site mais rápido
+✔ Melhor desempenho
+
+--------------------------------------------------
+
+FIGURE E FIGCAPTION
+
+Usadas para legenda de imagens.
+
+<figure>
+
+    <img
+    src="praia.jpg"
+    alt="Praia">
+
+    <figcaption>
+        Praia em Fernando de Noronha
+    </figcaption>
+
+</figure>
+
+--------------------------------------------------
+
+ERROS COMUNS
+
+❌ Esquecer o ALT
+
+<img src="foto.jpg">
+
+✔ Correto
+
+<img
+src="foto.jpg"
+alt="Descrição da foto">
+
+--------------------------------
+
+❌ Imagem muito pesada
+
+10MB
+
+✔ Melhor
+
+.webp otimizada
+
+--------------------------------
+
+❌ Definir largura e altura incorretas
+
+✔ Utilize CSS responsivo
+
+--------------------------------------------------
+
+BOAS PRÁTICAS
+
+✔ Sempre usar ALT
+✔ Utilizar WebP quando possível
+✔ Otimizar tamanho do arquivo
+✔ Usar loading="lazy"
+✔ Utilizar imagens responsivas
+✔ Nomear arquivos corretamente
+
+Exemplo:
+
+tenis-nike-air-max.webp
+
+Melhor que:
+
+IMG_3847.webp
+
+--------------------------------------------------
+
+RESUMO
+
+<img> = Exibe imagens na página.
+
+ATRIBUTOS MAIS IMPORTANTES:
+
+src     -> Caminho da imagem
+alt     -> Texto alternativo
+width   -> Largura
+height  -> Altura
+title   -> Dica ao passar mouse
+loading -> Carregamento otimizado
+
+FORMATOS:
+
+.jpg  -> Fotos
+.png  -> Transparência
+.webp -> Melhor para web
+.svg  -> Vetores
+.gif  -> Animações
+
+SEO:
+
+✔ Sempre usar ALT
+✔ Nomear arquivos corretamente
+✔ Otimizar imagens
+
+A tag IMG é uma das mais importantes do HTML,
+sendo utilizada em praticamente todos os sites modernos.
+==================================================
+-->

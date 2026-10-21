@@ -1,0 +1,149 @@
+
+
+<!-- videos em html -->
+ <video src=""
+     controls
+     controlsList="nodownload"
+     autoplay
+     muted
+     poster=""
+>
+</video>
+
+
+
+
+<!--
+=========================================
+VÍDEOS EM HTML5
+=========================================
+
+A tag <video> é utilizada para inserir vídeos diretamente em uma página web,
+sem a necessidade de plugins externos.
+
+ESTRUTURA BÁSICA:
+
+<video>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+-----------------------------------------
+PRINCIPAIS ATRIBUTOS DA TAG <video>
+-----------------------------------------
+
+controls
+- Exibe os controles do vídeo.
+- Permite reproduzir, pausar, avançar e controlar o volume.
+
+autoplay
+- Inicia o vídeo automaticamente ao carregar a página.
+- Alguns navegadores exigem o atributo muted para funcionar.
+
+loop
+- Faz o vídeo reiniciar automaticamente quando termina.
+
+muted
+- Inicia o vídeo sem som.
+
+poster
+- Define uma imagem de capa antes da reprodução.
+
+width
+- Define a largura do vídeo.
+
+height
+- Define a altura do vídeo.
+
+preload
+- Controla o carregamento do vídeo.
+- Valores:
+  * auto
+  * metadata
+  * none
+
+-----------------------------------------
+TAG <source>
+-----------------------------------------
+
+A tag <source> é usada dentro da tag <video>
+para fornecer diferentes formatos de vídeo.
+
+Exemplo:
+
+<source src="video.mp4" type="video/mp4">
+<source src="video.webm" type="video/webm">
+
+O navegador utilizará o primeiro formato compatível.
+
+-----------------------------------------
+FORMATOS MAIS COMUNS
+-----------------------------------------
+
+MP4  -> video/mp4
+WEBM -> video/webm
+OGG  -> video/ogg
+
+-----------------------------------------
+EXEMPLO COMPLETO
+-----------------------------------------
+
+<video
+    controls
+    autoplay
+    muted
+    loop
+    width="700"
+    poster="capa.jpg">
+
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+
+    Seu navegador não suporta vídeos HTML5.
+</video>
+
+-----------------------------------------
+TAGS RELACIONADAS
+-----------------------------------------
+
+<track>
+- Adiciona legendas ao vídeo.
+
+Exemplo:
+
+<track
+    src="legenda.vtt"
+    kind="subtitles"
+    srclang="pt"
+    label="Português">
+
+-----------------------------------------
+ACESSIBILIDADE
+-----------------------------------------
+
+Sempre forneça:
+- Controles (controls)
+- Legendas (<track>)
+- Texto alternativo quando necessário
+
+-----------------------------------------
+RESUMO
+-----------------------------------------
+
+<video>  -> Contêiner principal do vídeo
+<source> -> Define os arquivos de vídeo
+<track>  -> Adiciona legendas
+
+Atributos principais:
+controls
+autoplay
+loop
+muted
+poster
+width
+height
+preload
+
+=========================================
+FIM DO RESUMO
+=========================================
+-->
